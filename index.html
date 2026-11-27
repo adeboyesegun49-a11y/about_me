@@ -1,62 +1,153 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The portfolio of Adeboye Oluwasegun Joseph, a web development learner.">
+    <meta name="theme-color" content="#f8f7f4">
     <title>Adeboye Oluwasegun Joseph | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <button id="theme-toggle" type="button">Use dark mode</button>
-      <h1>Adeboye Oluwasegun Joseph</h1>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="Adeboye Oluwasegun Joseph, home">
+          <span class="brand-mark" aria-hidden="true">AO</span>
+          <span class="brand-copy">
+            <strong>Adeboye Oluwasegun Joseph</strong>
+            <span>Personal portfolio</span>
+          </span>
+        </a>
+
+         <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span id="theme-toggle-label">Switch to dark mode</span>
+        </button>
+      </div>
     </header>
 
-    <main>
-      <section id="home">
-        <h2 id="greeting">Hello, Adeboye Oluwasegun Joseph</h2>
-        <p>I'm learning web development and building useful things for the web.</p>
+    <main id="main-content">
+      <section id="home" class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> <span id="greeting">Good morning</span></p>
+          <div class="intro-heading">
+            <img
+              class="profile-photo"
+              src="images/Snapchat-800173362.jpg"
+              alt="Portrait of Adeboye Oluwasegun Joseph"
+            >
+            <h1 id="hero-title">I'm <span>Adeboye Oluwasegun Joseph.</span></h1>
+          </div>
+          <p class="hero-role">Learning full-stack development</p>
+          <p class="hero-intro">I am learning how the web works and building useful things with HTML, CSS, and JavaScript.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my projects <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" href="#contact">Get in touch</a>
+          </div>
+          <p class="learning-note">Currently learning <span>HTML</span><span>CSS</span><span>JavaScript</span></p>
+        </div>
+
       </section>
 
-      <section id="about">
-        <h2>About me</h2>
-        <p>I enjoy learning how websites work and turning ideas into webpages.
-    Right now, I'm practicing HTML, CSS, and JavaScript.</p>
+      <section id="about" class="section container" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">A little about me</p>
+          <h2 id="about-title">Curiosity is where I start.</h2>
+        </div>
+        <div class="about-copy">
+          <p>I enjoy learning how websites work and turning ideas into webpages. Right now, I’m practicing HTML, CSS, and JavaScript while building my understanding one project at a time.</p>
+          <p>This portfolio is part of that process: a place to share what I’m learning and keep making it better.</p>
+        </div>
       </section>
 
-      <section id="skills">
-        <h2>Skills I'm learning</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
+      <section id="skills" class="section container" aria-labelledby="skills-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">The building blocks</p>
+            <h2 id="skills-title">What I’m learning</h2>
+          </div>
+          <p class="section-aside">Practicing the foundations of the web.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="card-index">01</span>
+            <h3>HTML</h3>
+            <p>Giving content clear structure and meaning.</p>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">02</span>
+            <h3>CSS</h3>
+            <p>Creating thoughtful layouts that adapt to different screens.</p>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">03</span>
+            <h3>JavaScript</h3>
+            <p>Learning to make pages respond to the people using them.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="projects">
-        <h2>My projects</h2>
-        <article>
-          <h3>Personal portfolio</h3>
-          <p>This website introduces me and helps me practice web development.</p>
-        </article>
+      <section id="projects" class="section container" aria-labelledby="projects-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">Small steps, real practice</p>
+            <h2 id="projects-title">Projects</h2>
+          </div>
+          <p class="section-aside">A few things I’m working on.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <span class="project-status status-current">Current project</span>
+            <h3>Personal portfolio</h3>
+            <p>A simple website to introduce myself and practice front-end development.</p>
+            <p class="project-tools">HTML · CSS · JavaScript</p>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status status-planned">Planned</span>
+            <h3>Simple calculator</h3>
+            <p>A project idea for practicing JavaScript and basic calculations.</p>
+            <p class="project-tools">JavaScript</p>
+          </article>
+        </div>
       </section>
 
-      <section id="contact">
-        <h2>08161859861</h2>
-        <p>adeboyesegun@49gmail.com</p>
+      <section id="contact" class="contact-section container" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="eyebrow">Say hello</p>
+          <h2 id="contact-title">Let’s connect.</h2>
+          <p>If you’d like to get in touch, you can reach me here.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:adeboyesegun@49gmail.com">
+            <span class="contact-icon" aria-hidden="true">✉</span>
+            <span><small>Email</small><strong>adeboyesegun@49gmail.com</strong></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-link" href="tel:08161859861">
+            <span class="contact-icon" aria-hidden="true">☎</span>
+            <span><small>Phone</small><strong>08161859861</strong></span>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
       </section>
     </main>
- <article>
-    <h3>Simple calculator</h3>
-    <p>A project idea I'm planning to build to practice JavaScript.</p>
-  </article>
-    <footer>
-      <p>© 2026 Adeboye OLuwasegun Joseph</p>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Adeboye Oluwasegun Joseph</p>
+        <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+      </div>
     </footer>
   </body>
 </html>
